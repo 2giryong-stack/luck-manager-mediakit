@@ -84,6 +84,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   padding:7px 14px;background:var(--paper-2);
 }
 .badge i{width:6px;height:6px;border-radius:50%;background:var(--ink);display:block}
+.badge .handle{text-transform:none;letter-spacing:0.02em;font-weight:600;color:var(--ink)}
 .hero h1{
   margin:clamp(18px,3vw,28px) 0 0;
   font-size:clamp(46px,11.5vw,132px);
@@ -205,7 +206,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .plan .price{display:flex;align-items:baseline;gap:4px;margin-top:auto;padding-top:6px}
 .plan .price .n{font-size:clamp(30px,5vw,40px);font-weight:750;letter-spacing:-0.045em;line-height:1}
 .plan .price .w{font-size:13px;font-weight:500;color:var(--ink-soft)}
-.plan .inc{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px;min-height:56px;align-content:flex-start}
+.plan .inc{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
 .plan .inc span{font-size:11px;color:var(--ink-soft);border:1px solid var(--line);border-radius:999px;padding:4px 9px;background:var(--paper-2)}
 .plan.featured{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .plan.featured .pk{color:rgba(255,255,255,.62)}
@@ -248,6 +249,11 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .btn-ghost{background:transparent;color:var(--paper);border-color:rgba(255,255,255,.35)}
 .btn-ghost:hover{background:rgba(255,255,255,.1);border-color:var(--paper)}
 .contact .foot{margin-top:clamp(30px,4vw,44px);display:flex;flex-wrap:wrap;gap:10px 20px;font-size:12.5px;color:rgba(255,255,255,.55)}
+@media (max-width:559px){
+  .mailrow{flex-direction:column;align-items:flex-start;gap:14px}
+  .hero .kicker{gap:6px 16px}
+  .hero .kicker span+span::before{content:none}
+}
 .contact .foot a{border-bottom:1px solid rgba(255,255,255,.3);padding-bottom:1px}
 .contact .foot a:hover{border-color:var(--paper);color:var(--paper)}
 
@@ -290,6 +296,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .section>.wrap{grid-template-columns:210px minmax(0,1fr);column-gap:clamp(32px,4vw,56px);align-items:start}
   .section>.wrap>.rail{flex-direction:column;align-items:flex-start;gap:10px;margin-bottom:0;position:sticky;top:92px}
   .section>.wrap>.rail .no{font-size:12px}
+  .plan .inc{min-height:56px;align-content:flex-start}
   .section>.body{padding-top:2px}
   .reels{grid-template-columns:repeat(3,1fr)}
   .plans{grid-template-columns:repeat(3,1fr);align-items:stretch}
@@ -350,7 +357,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 <!-- [수정] 히어로 문구: 아래 lead 문단과 kicker 를 고치세요. -->
 <section class="hero">
   <div class="wrap">
-    <p class="badge"><i></i>MEDIA KIT · @luck__manager</p>
+      <p class="badge"><i></i>MEDIA KIT · <span class="handle">@luck__manager</span></p>
     <h1>복대리 탐방</h1>
     <p class="lead keepall">
       팔로워 <strong>9,800명</strong>, 90일 누적 조회수 <strong>755만 회</strong>.
@@ -593,9 +600,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <article class="plan featured">
         <span class="flag">추천</span>
         <span class="pk">Package 03</span>
-        <h3>멀티채널<br>패키지</h3>
+        <h3>카드뉴스 /<br>릴스 2개</h3>
         <div class="price"><span class="n tnum">20</span><span class="w">만 원</span></div>
-        <div class="inc"><span>릴스</span><span>틱톡</span><span>쇼츠</span><span>네이버 클립</span><span>당근</span></div>
+        <div class="inc"><span>카드뉴스</span><span>릴스 2개</span></div>
       </article>
     </div>
 
